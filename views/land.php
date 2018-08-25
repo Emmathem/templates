@@ -27,27 +27,28 @@
         <ul>
             <li><a href="" class="underline">Show Case</a></li>
             <li><a href="" class="underline">Blog</a></li>
-            <li><a href="" class="underline">Shop</a></li>
+<!--            <li><a href="" class="underline">Shop</a></li>-->
             <li><a class="btn btn-login" href="">Login</a></li>
         </ul>
     </nav>
 </header>
 <section class="welcome">
     <div class="buyer">
-        <div class="btn-pos">
-            <a class="btn btn-vendor"></a>
+        <div class="btn-buyer-cont">
+            <a href="#" class="btn btn-buyer"><span>Take me to shop</span></a>
         </div>
     </div>
-    <div class="center-circle animated slideInDown" data-wow-delay = "" data-wow-duration = "">
+    <div class="center-circle animated zoomInDown" data-wow-delay = "5s" data-wow-duration = ".5s">
         <img src="assets/images/logo-sm.png" alt="">
     </div>
     <div class="seller">
         <div class="btn-pos">
-            <a href="" class="btn btn-vendor">Login as a Vendor</a>
+            <a href="designers" class="btn btn-vendor"><span>Login as a Vendor</span></a>
         </div>
     </div>
 </section>
-<script src="../assets/js/jquery-3.2.1.min.js"></script>
-<script src="../assets/js/wow.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src = "assets/js/wawooh.js"></script>
 </body>
 </html>

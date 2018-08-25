@@ -6,17 +6,17 @@
  *  When the user scrolls down from 20px from the top of the document
  */
 
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("icon-top").style.display = "block";
-    } else {
-        document.getElementById("icon-top").style.display = "none";
-    }
-}
+// window.onscroll = function () {
+//     scrollFunction();
+// };
+//
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         document.getElementById("icon-top").style.display = "block";
+//     } else {
+//         document.getElementById("icon-top").style.display = "none";
+//     }
+// }
 
 $(function () {
     $('[name = "d-decision"]').change(function () {

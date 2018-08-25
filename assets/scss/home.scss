@@ -23,7 +23,7 @@ section {
   z-index: 9999;
   nav {
     overflow: hidden;
-    margin: 10px;
+    margin: 20px 10px 10px;
     .underline {
       position: relative;
       overflow: hidden;
@@ -61,7 +61,8 @@ section {
     }
     ul {
       float: right;
-      width: 35%;
+      margin-right: 26px;
+      display: inline-flex;
       list-style: none;
       overflow: hidden;
     }
@@ -70,8 +71,6 @@ section {
       text-decoration: none;
       font-size: 15px;
       padding: 12px 25px;
-      margin-left: 5px;
-      //@include borderLine($theme-gold);
       color: $theme-white;
     }
     .btn {
@@ -103,6 +102,51 @@ section {
     float: left;
     height: inherit;
     background: $theme-deepgold;
+    .btn-buyer-cont {
+      bottom: 15px;
+      position: absolute;
+      margin-left: 30px;
+      left: 0;
+      //@include borderLine($theme-gold);
+      .btn {
+        padding: 10px 23px;
+        background: $theme-gold;
+        min-height: 1px;
+        border-radius: 50px;
+        @include boxShadow(2px, 2px, 3px, $shadowBlack);
+        text-decoration: none;
+      }
+      .btn-buyer {
+        @include borderLine(rgba($theme-gold, .4));
+        @include transition(0.5s);
+        color: $theme-white;
+        span {
+          position: relative;
+          @include transition(0.5s);
+          cursor: pointer;
+          &:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+          }
+        }
+        &:hover {
+          span {
+            padding-right: 25px;
+            &:after {
+              opacity: 1;
+              right: 0;
+            }
+          }
+        }
+        &:hover {
+          @include transition(0.5s);
+          @include noBoxShadow(none);
+        }
+      }
+    }
   }
   .seller {
     @extend .buyer;
@@ -110,27 +154,51 @@ section {
     .btn-pos {
       bottom: 15px;
       position: absolute;
-      width: 40%;
-      right: -23%;
+      margin-right: 30px;
+      right: 0;
       //@include borderLine($theme-gold);
       .btn {
         padding: 10px 23px;
         background: $theme-gold;
         min-height: 1px;
         border-radius: 50px;
-        @include noBoxShadow(none);
+        @include boxShadow(2px, 2px, 3px, $shadowBlack);
         text-decoration: none;
       }
       .btn-vendor {
         @include borderLine(rgba($theme-gold, .4));
         @include transition(0.5s);
         color: $theme-white;
+        span {
+          position: relative;
+          @include transition(0.5s);
+          cursor: pointer;
+          &:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+          }
+        }
+        &:hover {
+          span {
+            padding-right: 25px;
+            &:after {
+              animation: slideInRight 0.5s linear;
+              opacity: 1;
+              right: 0;
+            }
+          }
+        }
         &:hover {
           @include transition(0.5s);
+          @include noBoxShadow(none);
         }
       }
     }
   }
+
   .center-circle {
     width: 100px;
     height: 100px;
@@ -152,6 +220,33 @@ section {
   }
 }
 
+.designerHome {
+  height: 100vh;
+  .rightContainer {
+    width: 65%;
+    background: url("../images/designerBanner.jpeg") no-repeat center;
+    background-size: cover;
+    height: inherit;
+    display: inline-block;
+  }
+  .registerCorner {
+    height: inherit;
+    width: 35%;
+    float: right;
+    background: $theme-white;
+    .form-container {
+      padding: 10px;
+      .img-holder {
+        width: 0;
+        margin: 10px auto 5px;
+        img {
+          width: auto;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
 @keyframes rotate-logo {
   from {
     transform: rotate(0deg);

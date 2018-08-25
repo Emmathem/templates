@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div style= "width: 85%; margin: 26px auto 0; border: 1px solid rgba(0,0,0,0.2); height: auto;">
+        <div style = "padding: 15px;text-align: center;">
+        <img style = "width: 100px; background-size: contain;" src="logo.png" alt="wawooh-logo"></div>
+        <div style = "padding: 15px; margin: 15px 10px 0;">
+            <h4> Dear <span th:text="${name}"> </span>,</h4>
+            <p style = "line-height: 25px; font-size: 1em; color: #333;">
+                You have requested to change your password on WAWOOH. Kindly click the following link to continue.
+            </p>
+            <span style = "line-height: 25px; font-size: 1em; color: #333; text-align: center">
+                <!--<a th:href="${link}"><b><span th:text="${link}"></span></b></a>-->
+                <a th:href="${link}" style = "padding: .5em 1em; background: #cd9933; color: #fff; text-decoration: none; box-shadow: rgba(0,0,0,.3) 1px 2px 1px;">Change Password</a>
+            </span>
+            
+        </div>
+        <div style = "color: #fff;margin-top: 10px; background: #cd9933; padding: 7px; text-align: center;">
+            <span>Powered By Wawooh</span>
+        </div>
+    </div>
+</body>
+
+</html>

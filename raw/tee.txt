@@ -1,0 +1,27 @@
+ <!-- <header>
+      <div class = "logo">
+          <a href="">PAGE TITLE</a>
+      </div>
+       <nav class="navbar">
+        <ul>
+            <li><a href="" class = "underline">home</a></li>
+            <li><a href="decision.php" class = "underline">Web</a></li>
+            <li><a href="" class = "underline">Contact</a></li>
+            <li class="dropdown">
+                <a href="" class = "underline">More Links  <i class = "fa fa-caret-down"></i></a>
+                <ul class = "dropdown-ul animated fadeInUp">
+                    <li><a href="" class = "underline">One</a></li>
+                    <li><a href="" class = "underline">Two</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+               <a href="" class = "underline">feedback <i class = "fa fa-caret-down"></i></a>
+                <ul class = "dropdown-ul animated fadeInUp">
+                    <li><a href="" class = "underline">Thire</a></li>
+                    <li><a href="" class = "underline">four</a></li>
+                </ul>
+            </li>
+            <li><a href="" class = "underline">Drop us</a></li>
+        </ul>
+    </nav>
+    </header>-->

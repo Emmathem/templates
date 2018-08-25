@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^checkout/?$ views/checkout.php [NC,L,QSA]
+RewriteRule ^checkout-out/?$ views/checkout2.php [NC,L,QSA]
+RewriteRule ^decision/?$ views/decision.php [NC,L,QSA]
+RewriteRule ^category/?$ views/category.php [NC,L,QSA]
+RewriteRule ^home/?$ views/land.php [NC,L,QSA]
+RewriteRule ^about-us/?$ views/about-us.php [NC,L,QSA]
+RewriteRule ^logout/?$ view/logout.php [NC,L,QSA]
+RewriteRule ^picture-gallery/?$ views/picture-gallery.php [NC,L,QSA]
+RewriteRule ^videos-gallery/?$ views/videos-gallery.php [NC,L,QSA]
+#RewriteRule ^pagenotfound/?$ view/error/pagenotfound.php [NC,L,QSA]
+#errorDocument 404 http://eduinfoyoruba.org/pagenotfound
+
+#--To rewrite the url to be more user-friendly
+RewriteRule ^production/([A-Za-z0-9\-_\.]+)/?$ views/prod.php?slug=$1 [NC,L,QSA]
+RewriteRule ^stories/([A-Za-z0-9\-_\.]+)/?$ views/story.php?slug=$1 [NC,L,QSA]
+RewriteRule ^downloads/([A-Za-z0-9\-_\.]+)/?$ views/downloads.php?id=$1 [NC,L,QSA]
+RewriteRule ^get_file/([A-Za-z0-9\-_\.]+)/?$ views/get_file.php?id=$1 [NC,L,QSA]
+RewriteRule ^daily/([A-Za-z0-9\-_\.]+)/?$ views/daily.php?link=$1 [NC,L,QSA]
+
+</IfModule>

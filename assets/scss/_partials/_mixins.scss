@@ -1,0 +1,42 @@
+/**
+ * Mixins file for W A H O O H
+ *
+ */
+
+@mixin transition($speed) {
+  -webkit-transition: ease all $speed;
+  -moz-transition: ease all $speed;
+  -o-transition: ease all $speed;
+  transition: ease all $speed;
+}
+
+@mixin borderLine($color) {
+  border: 1px solid $color;
+}
+
+@mixin boxShadow($a, $b, $blur, $color) {
+  -webkit-box-shadow: $a $b $blur $color;
+  -moz-box-shadow: $a $b $blur $color;
+  -o-box-shadow: $a $b $blur $color;
+  box-shadow: $a $b $blur $color;
+}
+
+@mixin boxFullShadow($s, $d, $blur, $spread, $color) {
+  -webkit-box-shadow: $s $d $blur $spread $color;
+  -moz-box-shadow: $s $d $blur $spread $color;
+  -o-box-shadow: $s $d $blur $spread $color;
+  box-shadow: $s $d $blur $spread $color;
+}
+
+@mixin noBoxShadow($val) {
+  -webkit-box-shadow: $val;
+  -moz-box-shadow: $val;
+  -o-box-shadow: $val;
+  box-shadow: $val;
+}
+
+@mixin animationSlide($name, $delay) {
+  -webkit-animation: $name $delay;
+  -o-animation: $name $delay;
+  animation: $name $delay;
+}

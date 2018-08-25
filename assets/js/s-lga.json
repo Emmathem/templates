@@ -1,0 +1,40 @@
+[
+    {
+        "Abia":[
+            {
+              "1":"Aba North",
+              "Aba South":"Aba South"
+            }
+        ]
+    },
+       
+    {
+        "Adamawa": [
+            {
+                "Demsa":"Demsa",
+                "Fufure":"Future"
+            }
+        ]
+    },
+    {
+        "AkwaIbom": [
+            {
+                "Abak":"Abak"
+            }
+        ]
+    },
+    {
+        "Anambra": [
+            {
+                "Aguata":"Aguata"
+            }
+        ]
+    },
+    {
+        "Bauchi": [
+            {
+                "Alkaleri":"Alkaleri"
+            }
+        ]
+    }
+]

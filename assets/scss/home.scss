@@ -1,0 +1,162 @@
+@import "_partials/_vars";
+@import "_partials/_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  z-index: 9999;
+  nav {
+    overflow: hidden;
+    margin: 10px;
+    .underline {
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: 0;
+        background: $theme-gold;
+        height: 3.3px;
+        transition-property: width;
+        transition: 0.3s ease-out;
+      }
+      &:hover,
+      :focus,
+      :active {
+        &::after {
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+    }
+    .logo-brand {
+      margin-left: 15px;
+      display: inline-block;
+      .logo-cont {
+        background: center no-repeat;
+        background-size: contain;
+        width: auto;
+        height: 40px;
+      }
+    }
+    ul {
+      float: right;
+      width: 35%;
+      list-style: none;
+      overflow: hidden;
+    }
+    li a {
+      float: left;
+      text-decoration: none;
+      font-size: 15px;
+      padding: 12px 25px;
+      margin-left: 5px;
+      //@include borderLine($theme-gold);
+      color: $theme-white;
+    }
+    .btn {
+      padding: 12px 30px;
+      @include borderLine($theme-gold);
+      background: transparent;
+      outline: 0;
+      border-radius: 2px;
+      color: $theme-gold;
+      &:focus {
+        @include noBoxShadow(none);
+        border: 0;
+      }
+      &:hover {
+        @include transition(0.5s);
+        background: $theme-gold;
+        color: $theme-white;
+        border: none;
+      }
+    }
+  }
+}
+
+.welcome {
+  height: 100vh;
+  @include transition(0.5s);
+  .buyer {
+    width: 50%;
+    float: left;
+    height: inherit;
+    background: $theme-deepgold;
+  }
+  .seller {
+    @extend .buyer;
+    background: $theme-inspection;
+    .btn-pos {
+      bottom: 15px;
+      position: absolute;
+      width: 40%;
+      right: -23%;
+      //@include borderLine($theme-gold);
+      .btn {
+        padding: 10px 23px;
+        background: $theme-gold;
+        min-height: 1px;
+        border-radius: 50px;
+        @include noBoxShadow(none);
+        text-decoration: none;
+      }
+      .btn-vendor {
+        @include borderLine(rgba($theme-gold, .4));
+        @include transition(0.5s);
+        color: $theme-white;
+        &:hover {
+          @include transition(0.5s);
+        }
+      }
+    }
+  }
+  .center-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    @include borderLine($theme-white);
+    @include transition(0.5s);
+    @include boxFullShadow($shadowBlack, 0, 0, 7px, 2px);
+    left: 46%;
+    right: 50%;
+    background: $theme-white;
+    img {
+      animation: rotate-logo 3s linear infinite;
+      background-size: contain;
+      background: no-repeat center;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

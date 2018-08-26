@@ -22,6 +22,7 @@
 <header class="header">
     <nav>
         <div class="logo-brand">
+<!--            <a href=""><img class="logo-cont" src="assets/images/waw-white.png" alt=""></a>-->
             <a href=""><img class="logo-cont" src="assets/images/logo.png" alt=""></a>
         </div>
         <ul>
@@ -34,6 +35,7 @@
 </header>
 <section class="welcome">
     <div class="buyer">
+        <div class="b-cover"></div>
         <div class="btn-buyer-cont">
             <a href="#" class="btn btn-buyer"><span>Take me to shop</span></a>
         </div>
@@ -42,6 +44,7 @@
         <img src="assets/images/logo-sm.png" alt="">
     </div>
     <div class="seller">
+        <div class="v-cover"></div>
         <div class="btn-pos">
             <a href="designers" class="btn btn-vendor"><span>Login as a Vendor</span></a>
         </div>

@@ -41,3 +41,7 @@
   -o-animation: $name $delay;
   animation: $name $delay;
 }
+
+@mixin clientSlide() {
+  //@for $i
+}

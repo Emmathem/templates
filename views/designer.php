@@ -43,8 +43,6 @@
                             <input type="email" id="email" class="form-control" placeholder="Enter your email address">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                         </div>
-
-
                     </div>
                     <div class="form-group">
                         <label for="password" class="sr-only">Enter your password</label>
@@ -57,7 +55,7 @@
                         <input type="button" id="login" value="Authenticate Me" class="btn btn-login-wawooh">
                         <img src="assets/images/AjaxLoader.gif" class="l-image" alt="">
 
-                        <a href="" class="forgetPwd">Forgot Password?</a>
+                        <a href="" class="forgetPwd pull-right">Forgot Password?</a>
                     </div>
                 </form>
 

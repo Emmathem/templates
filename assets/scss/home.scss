@@ -71,13 +71,14 @@ section {
       text-decoration: none;
       font-size: 15px;
       padding: 12px 25px;
-      color: $theme-white;
+      color: $theme-gold;
     }
     .btn {
       padding: 12px 30px;
       @include borderLine($theme-gold);
       background: transparent;
       outline: 0;
+      margin-left: 5px;
       border-radius: 2px;
       color: $theme-gold;
       &:focus {
@@ -101,7 +102,8 @@ section {
     width: 50%;
     float: left;
     height: inherit;
-    background: $theme-deepgold;
+    background: $theme-deepgold url("../images/buyerafrica.jpeg") no-repeat center;
+    background-size: cover;
     .btn-buyer-cont {
       bottom: 15px;
       position: absolute;
@@ -148,9 +150,11 @@ section {
       }
     }
   }
+
   .seller {
     @extend .buyer;
-    background: $theme-inspection;
+    background: $theme-black url("../images/vendor.jpg") no-repeat center;
+    background-size: cover;
     .btn-pos {
       bottom: 15px;
       position: absolute;
@@ -205,12 +209,13 @@ section {
     border-radius: 50%;
     position: absolute;
     top: 40%;
-    @include borderLine($theme-white);
-    @include transition(0.5s);
-    @include boxFullShadow($shadowBlack, 0, 0, 7px, 2px);
     left: 46%;
     right: 50%;
     background: $theme-white;
+    z-index: 9999;
+    @include borderLine($theme-white);
+    @include transition(0.5s);
+    @include boxFullShadow($shadowBlack, 0, 0, 7px, 2px);
     img {
       animation: rotate-logo 3s linear infinite;
       background-size: contain;
@@ -309,7 +314,7 @@ section {
           border-bottom: 1px solid rgba($theme-gold, .4);
         }
         .l-image {
-          position: absolute;
+          //position: absolute;
           width: 20px;
           height: 20px;
           bottom: 43%;
@@ -318,6 +323,7 @@ section {
         }
         .forgetPwd {
           padding-left: 13px;
+          padding-top: 10px;
           color: $theme-black;
           &:hover {
             @include transition(0.5s);
@@ -453,6 +459,23 @@ section {
   width: inherit;
 }
 
+.b-cover {
+  background: $theme-white;
+  opacity: .7;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: inherit;
+}
+
+.v-cover {
+  background: $theme-black;
+  opacity: .7;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: inherit;
+}
 @keyframes rotate-logo {
   from {
     transform: rotate(0deg);

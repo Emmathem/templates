@@ -36,8 +36,21 @@
                     </div>
                     <div class="back">
                         <div class="content">
-                            <h3>Tips to Register</h3>
-                            <span>Lorem Message</span>
+                            <h3>How it works</h3>
+                            <ul>
+                                <li>
+                                    <span>Register</span>
+                                    <img src="../assets/images/clipboard.png" alt="">
+                                </li>
+                                <li>
+                                    <span>Add Products</span>
+                                    <img src="../assets/images/cloud.png" alt="">
+                                </li>
+                                <li>
+                                    <span>Earn</span>
+                                    <img src="../assets/images/money.png" alt="">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

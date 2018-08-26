@@ -235,7 +235,7 @@ section {
     display: inline-block;
     .inner-content {
       position: relative;
-      margin: 14em 3em 0;
+      margin: 10em 3em 0;
       padding: 10px;
       text-align: left;
       h3 {
@@ -315,7 +315,6 @@ section {
           border-bottom: 1px solid rgba($theme-gold, .4);
         }
         .l-image {
-          //position: absolute;
           width: 20px;
           height: 20px;
           bottom: 43%;
@@ -399,6 +398,7 @@ section {
               @include transition(.3s);
             }
           }
+
           #google-connect {
             background: $googlePlus url('../images/google-plus-white.png') no-repeat scroll 0 0px/35px 40px padding-box border-box;
             &:hover {
@@ -516,12 +516,10 @@ section {
 
 .infoCard {
   width: inherit;
+  margin-top: 40px;
   height: 200px;
   background: transparent;
   border-left: 8px solid $theme-white;
-  border-bottom: 1px solid $theme-white;
-  border-top: 1px solid $theme-white;
-  border-right: 1px solid $theme-white;
   padding: 4%;
   @include perspective(800px);
 }
@@ -551,9 +549,11 @@ section {
   }
   .front {
     background: $theme-black;
-    h3 {
-      font-size: .9em;
+    h6 {
+      font-size: 1em;
+      font-weight: bold;
       text-align: center;
+      color: $theme-gold;
       padding-top: 30px;
     }
   }
@@ -565,8 +565,35 @@ section {
       h3 {
         font-size: 14px;
       }
-      span {
-        line-height: 25px;
+      ul {
+        list-style: none;
+        margin: 20px 0 0 0;
+        overflow: hidden;
+      }
+      li {
+        padding: 20px;
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-left: 14%;
+        @include borderLine($theme-gold);
+        border-radius: 100%;
+       span {
+         font-size: .4em;
+         position: absolute;
+         bottom: 60px;
+         padding-left: 1px;
+       }
+        &:after {
+          width: 100%;
+          height: 2px;
+          content: '';
+          position: absolute;
+          background-color: #7d7d7d;
+          top: 15px;
+          left: -50%;
+          z-index: -1;
+        }
       }
     }
   }

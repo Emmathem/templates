@@ -1,0 +1,13 @@
+{
+  "web": {
+    "client_id": "800002756686-364b5f18vlha9n6v457kggovfk6i6g29.apps.googleusercontent.com",
+    "project_id": "wawooh-test-1535267342745",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "dVFt6PtINwK4tXauMCUCafsf",
+    "javascript_origins": [
+      "http://testsite.com"
+    ]
+  }
+}

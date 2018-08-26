@@ -120,7 +120,6 @@ $(function () {
     $('#pno, #pn').intlTelInput();
 
 
-
 });
 
 function formatCurrency(num) {
@@ -261,10 +260,10 @@ $(document).ready(function () {
     });
 
     //toggle between text and password, save the stress of confirm password input
-    $('.pwd-show').on('click', function () {
+    $('.pwd-show, .pwdReg-show').on('click', function () {
         $(this).toggleClass("fa-eye fa-eye-slash");
         let field = $($(this).attr("toggle"));
-        if(field.attr("type") === "password") {
+        if (field.attr("type") === "password") {
             field.attr("type", "text");
         } else {
             field.attr("type", "password");
@@ -272,7 +271,7 @@ $(document).ready(function () {
     });
 
     $('#login').on('click', function () {
-        $(this).val("Please wait...").attr("disabled","disabled");
+        $(this).val("Please wait...").attr("disabled", "disabled");
         $('.l-image').show();
     });
 
@@ -290,7 +289,7 @@ $(document).ready(function () {
         $('#loginForm').show(300);
         $('.regNotify').show();
         //location.reload();
-    })
+    });
 
     $('#regFlip').on('click', function (e) {
         e.preventDefault();
@@ -298,18 +297,20 @@ $(document).ready(function () {
         $('.regNotify').hide();
         $('#regForm').show(800);
         $('.login-form').css({
-            'marginTop':'4em'
+            'marginTop': '4em'
+        });
+    });
+    $('#loginReg').on('click', function (e) {
+        e.preventDefault();
+        $('#regForm').hide(500);
+        $('#loginForm').show(300);
+        $('.regNotify').show();
+        $('.login-form').css({
+            'marginTop': '8em'
         })
-
-        $('#loginReg').on('click', function (e) {
-            e.preventDefault();
-            $('#regForm').hide(500);
-            $('#loginForm').show(300);
-            $('.regNotify').show();
-            $('.login-form').css({
-                'marginTop':'8em'
-            })
-            //location.reload();
-        })
-    })
+        //location.reload();
+    });
+    $('.card').click(function(){
+        $(this).toggleClass('flipped');
+    });
 });

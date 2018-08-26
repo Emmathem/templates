@@ -73,3 +73,10 @@
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+@mixin transformNew() {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}

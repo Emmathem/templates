@@ -46,12 +46,13 @@
     <div class="seller">
         <div class="v-cover"></div>
         <div class="btn-pos">
-            <a href="designers" class="btn btn-vendor"><span>Login as a Vendor</span></a>
+            <a href="designers" target="_new" class="btn btn-vendor"><span>Login as a Vendor</span></a>
         </div>
     </div>
 </section>
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src = "assets/js/wawooh.js"></script>
+
 </body>
 </html>

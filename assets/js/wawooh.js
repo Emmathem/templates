@@ -259,4 +259,20 @@ $(document).ready(function () {
             return true;
         }
     });
+
+    //toggle between text and password, save the stress of confirm password input
+    $('.pwd-show').on('click', function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        let field = $($(this).attr("toggle"));
+        if(field.attr("type") === "password") {
+            field.attr("type", "text");
+        } else {
+            field.attr("type", "password");
+        }
+    });
+
+    $('#login').on('click', function () {
+        $(this).val("Please wait...").attr("disabled","disabled");
+        $('.l-image').show();
+    })
 });

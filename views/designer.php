@@ -17,37 +17,53 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <title>Designer | Welcome Home</title>
 </head>
 <body>
 <section class="designerHome">
     <div class="rightContainer">
-        <h3>Connect with buyers </h3>
-        <h4>For your design</h4>
+        <div class="cover-layer"></div>
+        <div class="inner-content">
+            <h3>Connect with buyers </h3>
+            <h4>For your design</h4>
+        </div>
     </div>
     <div class="registerCorner">
         <div class="form-container">
             <div class="img-holder">
-                <img src="assets/images/logo" alt="W">
+                <img src="assets/images/logo.png" alt="W">
             </div>
 
             <div class="login-form">
                 <form action="">
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id = "email" class="form-control" placeholder="Enter your email address">
+                        <label for="email" class="sr-only">Enter your email address</label>
+                        <div class="input-group">
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        </div>
+
+
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                        <label for="password" class="sr-only">Enter your password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                            <span class="input-group-addon"><i toggle = "#password" class="fa fa-eye pwd-show"></i></span>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="button" id="login" value="Authenticate Me" class="btn btn-warning">
+                        <input type="button" id="login" value="Authenticate Me" class="btn btn-login-wawooh">
+                        <img src="assets/images/AjaxLoader.gif" class="l-image" alt="">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src = "assets/js/wawooh.js"></script>
 </body>
 </html>

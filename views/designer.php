@@ -59,17 +59,26 @@
                     </div>
                 </form>
 
-                <div class="hr-divider"><span>OR</span>
-                    <h3>Quick Sign up with</h3>
+                <div class="hr-divider" style="display: none;">
+                    <span>OR</span>
+                    <h3>Don</h3>
                 </div>
+                <hr>
 
-                <div class="quick-register">
+                <div class="regNotify">
+                    <h3>Don't have an account? <a href="">Register Now</a></h3>
+                </div>
+                <div class="quick-register" style="display: none;">
                     <ul>
                         <li><a href="#"  id="facebook-connect"> <span>Facebook</span></a></li>
                         <li><a href="#"  id="google-connect"> <span>Google</span></a></li>
                         <li><a href="#"  id="twitter-connect"> <span>Twitter</span></a></li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="footer">
+                <span>&copy; 2018 Wawooh HQ. All Right Reserved.</span>
             </div>
         </div>
     </div>

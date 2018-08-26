@@ -79,7 +79,7 @@ section {
       background: transparent;
       outline: 0;
       margin-left: 5px;
-      border-radius: 2px;
+      border-radius: 50px;
       color: $theme-gold;
       &:focus {
         @include noBoxShadow(none);
@@ -268,7 +268,7 @@ section {
         }
       }
       .login-form {
-        margin: 6em 30px 0;
+        margin: 8em 30px 0;
         label {
           font-weight: lighter;
         }
@@ -445,6 +445,29 @@ section {
             }
           }
         }
+
+        .regNotify {
+          margin-right: 3em;
+          h3 {
+            font-size: 14px;
+            text-align: center;
+            a {
+              color: $theme-gold;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      right: 9%;
+      span {
+        font-size: .8em;
+        color: $theme-black;
+        text-align: center;
+        align-content: center;
       }
     }
   }

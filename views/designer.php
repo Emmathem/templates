@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="form-group text-center">
-                        <input type="button" value="Reset my account" class="btn btn-login-wawooh">
+                        <input type="button" value="Reset my password" class="btn btn-login-wawooh">
                     </div>
 
                     <div class="regNotify" id="pwLogin">

@@ -61,10 +61,10 @@
 }
 
 @mixin transformX() {
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 @mixin backface() {
@@ -79,4 +79,21 @@
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
   transition: transform 0.4s;
+}
+
+//Define the images as variable
+$slide: (
+        url('../images/img13.jpg'),
+        url('../images/img04.gif'),
+        url('../images/img05.jpg'),
+        url('../images/img06.jpg'),
+        url('../images/buyerafrica.jpeg')
+);
+
+@mixin addImagesToSlide($divName, $image) {
+  @for $i from 1 through length($image) {
+    .#{$divName}#{$i} {
+      background: nth($image, $i) no-repeat center;
+    }
+  }
 }

@@ -98,6 +98,7 @@ section {
 .welcome {
   height: 100vh;
   @include transition(0.5s);
+
   .buyer {
     width: 50%;
     float: left;
@@ -108,6 +109,7 @@ section {
       bottom: 15px;
       position: absolute;
       margin-left: 30px;
+      z-index: 9999;
       left: 0;
       //@include borderLine($theme-gold);
       .btn {
@@ -151,6 +153,15 @@ section {
     }
   }
 
+  @include addImagesToSlide(slider, $slide);
+  .slider-img {
+    box-sizing: content-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
   .seller {
     @extend .buyer;
     background: $theme-black url("../images/vendor.jpg") no-repeat center;
@@ -548,7 +559,7 @@ section {
     box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
   }
   .front {
-    background: $theme-black;
+    background: rgba($theme-black, .5);
     h6 {
       font-size: 1em;
       font-weight: bold;
@@ -558,7 +569,7 @@ section {
     }
   }
   .back {
-    background: $theme-black;
+    background: rgba($theme-black, .5);
     padding: 10px;
     @include transformX();
     .content {
@@ -569,6 +580,7 @@ section {
         list-style: none;
         margin: 20px 0 0 0;
         overflow: hidden;
+        counter-reset: step;
       }
       li {
         padding: 20px;
@@ -578,20 +590,34 @@ section {
         margin-left: 14%;
         @include borderLine($theme-gold);
         border-radius: 100%;
-       span {
-         font-size: .4em;
-         position: absolute;
-         bottom: 60px;
-         padding-left: 1px;
-       }
+        &:nth-child(2) {
+          background: $theme-black;
+        }
+        span {
+          font-size: .4em;
+          position: absolute;
+          bottom: 60px;
+          margin-left: -7px;
+          &:nth-child(3) {
+            margin-left: 10px !important;
+          }
+        }
+        &:hover {
+          background: $theme-white;
+          @include transition(0.5s);
+          border: none;
+          span {
+            color: $theme-gold;
+          }
+        }
         &:after {
-          width: 100%;
-          height: 2px;
+          width: inherit;
+          height: 1px;
           content: '';
           position: absolute;
-          background-color: #7d7d7d;
-          top: 15px;
-          left: -50%;
+          background-color: $theme-gold;
+          top: 56%;
+          left: 50%;
           z-index: -1;
         }
       }

@@ -35,11 +35,11 @@ $(function () {
     });
 
     //initialize an awesome calendar better than html 5
-    $('.calender').flatpickr({
-        // minDate: "today",
-        altFormat: "M j, Y",
-        //altFormat: "M j, Y h:iK",
-    });
+    // $('.calender').flatpickr({
+    //     // minDate: "today",
+    //     altFormat: "M j, Y",
+    //     //altFormat: "M j, Y h:iK",
+    // });
 
     //control the mobile nav
     $(window).scroll(function () {
@@ -117,7 +117,7 @@ $(function () {
     /**
      * Control the international number on phone input
      */
-    $('#pno, #pn').intlTelInput();
+    // $('#pno, #pn').intlTelInput();
 
 
 });
@@ -148,7 +148,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-    $("#updateModal").modal('show');
+    // $("#updateModal").modal('show');
 
     $('.openNav').on('click', function (e) {
         //e.preventDefault();
@@ -160,56 +160,6 @@ $(document).ready(function () {
         $('.otherCat').slideToggle();
     })
 });
-
-$(document).ready(function () {
-    currentTab = 0;
-    links = $('a.wizard');
-    allWells = $('.setup-content');
-    allWells.hide();
-    links.addClass('disabled');
-    var item = links.eq(currentTab);
-    var target = $(item).attr('href');
-    $(item).removeClass('disabled');
-    $(target).show();
-    currentTab++;
-
-    $('.nextBtn').on('click', function () {
-        allWells.hide();
-        links.removeClass('btn-wawooh');
-        var item = links.eq(currentTab);
-        item.addClass('btn-wawooh')
-        var target = $(item).attr('href');
-        $(item).removeClass('disabled');
-        $(target).show();
-        currentTab++;
-        console.log(currentTab);
-    });
-
-    links.on('click', function () {
-        if (!$(this).hasClass('disabled')) {
-            allWells.hide();
-            links.removeClass('btn-wawooh');
-            currentTab = links.index(this);
-            console.log(currentTab);
-            currentTab++;
-            var target = $(this).attr('href');
-            $(this).addClass('btn-wawooh');
-            $(target).show();
-        }
-    });
-
-});
-
-function next() {
-    allWells.hide();
-    links.removeClass('btn-wawooh');
-    var item = links.eq(currentTab);
-    item.addClass('btn-wawooh')
-    var target = $(item).attr('href');
-    links.addClass('disabled');
-    $(item).removeClass('disabled');
-    $(target).show();
-}
 
 $(document).ready(function () {
     var form_count = 1, previous_form, next_form, total_forms;
@@ -313,4 +263,37 @@ $(document).ready(function () {
     $('.card').click(function(){
         $(this).toggleClass('flipped');
     });
+});
+
+$(function () {
+    let Page = (function () {
+        let $nav = $('#nav-dotd > span'),
+            slitslider = $('#slider').slitslider({
+                onBeforeChange: function (slide, pos) {
+                    $nav.removeClass('nav-dot-current');
+                    $nav.eq(pos).addClass('nav-dot-current');
+                }
+            }),
+            init = function () {
+                initEvents();
+            },
+            initEvents = function () {
+                $nav.each(function (i) {
+                    $(this).on('click', function (event) {
+                        let $dot = $(this);
+                        if (!slitslider.isActive()) {
+                            $nav.removeClass('nav-dot-current');
+                            $dot.addClass('nav-dot-current');
+                        }
+
+                        slitslider.jump(i + 1);
+                        return false;
+                    });
+                });
+            };
+        return {
+            init: init
+        };
+    })();
+    Page.init();
 });

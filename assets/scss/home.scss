@@ -263,7 +263,7 @@ section {
         }
       }
       .login-form {
-        margin: 11em 30px 0;
+        margin: 6em 30px 0;
         label {
           font-weight: lighter;
         }
@@ -278,6 +278,9 @@ section {
           color: $theme-white;
           font-weight: 400;
           letter-spacing: 1px;
+          &:hover {
+            background: $theme-deepgold;
+          }
         }
         .form-control {
           border-radius: 0;
@@ -312,6 +315,129 @@ section {
           bottom: 43%;
           display: none;
           margin-left: 10px;
+        }
+        .forgetPwd {
+          padding-left: 13px;
+          color: $theme-black;
+          &:hover {
+            @include transition(0.5s);
+            text-decoration: underline;
+          }
+        }
+        .hr-divider {
+          text-align: center;
+          margin-top: 3em;
+          span {
+            padding: 10px;
+            border-radius: 100px;
+            //font-weight: lighter;
+            color: $theme-gold;
+            background: transparent;
+            @include borderLine($theme-gold);
+          }
+        }
+        .quick-register {
+          margin-top: 4em;
+          overflow: hidden;
+          ul {
+            list-style: none;
+            margin: 0 auto;
+            width: 100%;
+          }
+          li a {
+            margin-left: 4px;
+            background-position: 25px 0;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: inline-block;
+            height: 40px;
+            float: left;
+            line-height: 40px;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            border-radius: 3px;
+            outline: rgb(255, 255, 255) none 0;
+            padding-left: 10%;
+            transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+            @include transition(.3s);
+          }
+          #facebook-connect {
+            background: $facebook url('../images/fb-white.svg') no-repeat scroll 0 0px/30px 40px padding-box border-box;
+            //padding-left: 10px;
+            &:hover {
+              background: $theme-white url('../images/fb-main.svg') no-repeat scroll 0 0px/30px 40px padding-box border-box;
+              @include transition(.8s);
+              @include borderLine($facebook);
+            }
+            span {
+              box-sizing: border-box;
+              color: $theme-white;
+              cursor: pointer;
+              padding-right: 14px;
+              text-align: center;
+              text-transform: uppercase;
+              border: 0 none rgb(255, 255, 255);
+              outline: rgb(255, 255, 255) none 0;
+              @include transition(.3s);
+            }
+            &:hover span {
+              color: $facebook;
+              @include transition(.3s);
+            }
+          }
+          #google-connect {
+            background: $googlePlus url('../images/google-plus-white.png') no-repeat scroll 0 0px/35px 40px padding-box border-box;
+            &:hover {
+              background: $theme-white url('../images/google-plus.png') no-repeat scroll 0 0px/35px 40px padding-box border-box;
+              @include borderLine($googlePlus);
+              @include transition(0.3s);
+            }
+            span {
+              box-sizing: border-box;
+              color: $theme-white;
+              cursor: pointer;
+              padding-right: 14px;
+              text-align: center;
+              text-transform: uppercase;
+              border: 0 none rgb(220, 74, 61);
+              outline: rgb(255, 255, 255) none 0;
+              @include transition(0.4s);
+            }
+            &:hover {
+              span {
+                color: $googlePlus;
+                @include transition(0.4s);
+              }
+            }
+          }
+
+          #twitter-connect {
+            background: $twitter url('../images/twitter-white.png') no-repeat scroll 0 3px/35px 35px padding-box border-box;
+            border: 1px solid rgb(85, 172, 238);
+            &:hover {
+              border-color: rgb(85, 172, 238);
+              background: $theme-white url('../images/twitter.png') no-repeat scroll 0 3px/35px 35px padding-box border-box;
+              @include transition(0.3s);
+            }
+            span {
+              box-sizing: border-box;
+              color: $theme-white;
+              cursor: pointer;
+              padding-right: 14px;
+              text-align: center;
+              text-transform: uppercase;
+              border: 0 none rgb(220, 74, 61);
+              outline: rgb(255, 255, 255) none 0;
+              @include transition(0.3s);
+            }
+            &:hover span {
+              color: $twitter;
+              @include transition(0.3s);
+            }
+          }
         }
       }
     }

@@ -56,8 +56,22 @@
                     <div class="form-group">
                         <input type="button" id="login" value="Authenticate Me" class="btn btn-login-wawooh">
                         <img src="assets/images/AjaxLoader.gif" class="l-image" alt="">
+
+                        <a href="" class="forgetPwd">Forgot Password?</a>
                     </div>
                 </form>
+
+                <div class="hr-divider"><span>OR</span>
+                    <h3>Quick Sign up with</h3>
+                </div>
+
+                <div class="quick-register">
+                    <ul>
+                        <li><a href="#"  id="facebook-connect"> <span>Facebook</span></a></li>
+                        <li><a href="#"  id="google-connect"> <span>Google</span></a></li>
+                        <li><a href="#"  id="twitter-connect"> <span>Twitter</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

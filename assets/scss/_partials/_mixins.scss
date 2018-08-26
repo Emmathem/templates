@@ -45,3 +45,31 @@
 @mixin clientSlide() {
   //@for $i
 }
+
+@mixin perspective($val) {
+  -webkit-perspective: $val;
+  -moz-perspective: $val;
+  -o-perspective: $val;
+  perspective: $val;
+}
+
+@mixin transformStyle() {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin transformX() {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+@mixin backface() {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

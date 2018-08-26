@@ -274,5 +274,42 @@ $(document).ready(function () {
     $('#login').on('click', function () {
         $(this).val("Please wait...").attr("disabled","disabled");
         $('.l-image').show();
+    });
+
+    $('.forgetPwd').on('click', function (e) {
+        e.preventDefault();
+        $('#loginForm').hide(500);
+        $('.regNotify').hide();
+
+        $('#forgotPassword, #pwLogin').show(300);
+    });
+
+    $('#loginLink').on('click', function (e) {
+        e.preventDefault();
+        $('#forgotPassword, #pwLogin').hide(500);
+        $('#loginForm').show(300);
+        $('.regNotify').show();
+        //location.reload();
+    })
+
+    $('#regFlip').on('click', function (e) {
+        e.preventDefault();
+        $('#loginForm').hide(600);
+        $('.regNotify').hide();
+        $('#regForm').show(800);
+        $('.login-form').css({
+            'marginTop':'4em'
+        })
+
+        $('#loginReg').on('click', function (e) {
+            e.preventDefault();
+            $('#regForm').hide(500);
+            $('#loginForm').show(300);
+            $('.regNotify').show();
+            $('.login-form').css({
+                'marginTop':'8em'
+            })
+            //location.reload();
+        })
     })
 });

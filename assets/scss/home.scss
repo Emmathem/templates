@@ -303,6 +303,7 @@ section {
           &:focus {
             @include noBoxShadow(none);
             color: $theme-gold;
+            //background: rgba($theme-gold, .8);
             outline: none;
           }
         }
@@ -332,7 +333,7 @@ section {
         }
         .hr-divider {
           text-align: center;
-          margin-top: 3em;
+          margin-top: 1.8em;
           span {
             padding: 10px;
             border-radius: 100px;
@@ -341,9 +342,13 @@ section {
             background: transparent;
             @include borderLine($theme-gold);
           }
+          h3 {
+            font-size: 1em;
+            font-weight: 400;
+          }
         }
         .quick-register {
-          margin-top: 4em;
+          margin-top: .5em;
           overflow: hidden;
           ul {
             list-style: none;

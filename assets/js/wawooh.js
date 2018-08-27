@@ -269,6 +269,21 @@ $(document).ready(function () {
     $('.card').click(function(){
         $(this).toggleClass('flipped');
     });
+
+    let owl = $("#owl-demo");
+
+    owl.owlCarousel({
+        navigation: false,
+        loop: true,
+        dots: false,
+        items: 1,
+        autoplay: true,
+        //transitionStyle: "backSlide",
+        autoplayTimeout: 3000,
+        animateOut: 'zoomOutLeft',
+        animateIn: 'fadeInLeft',
+        autoplayHoverPause: false
+    });
 });
 
 $(function () {

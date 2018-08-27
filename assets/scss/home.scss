@@ -106,7 +106,7 @@ section {
     background: $theme-deepgold url("../images/buyerafrica.jpeg") no-repeat center;
     background-size: cover;
     .btn-buyer-cont {
-      bottom: 15px;
+      bottom: 50px;
       position: absolute;
       margin-left: 30px;
       z-index: 9999;
@@ -153,18 +153,33 @@ section {
     }
 
     .over-content {
-      background: rgba($theme-black, .6);
+      //background: rgba($theme-black, .6);
       position: absolute;
       z-index: 9999;
       width: inherit;
-      top: 25%;
-      padding: 10px;
-      margin: 0;
-      height: auto;
-      span {
+      top: 5%;
+      margin: 14em 0 0;
+      padding: 30px;
+      h3 {
+        font-size: 2.4em;
+        text-transform: uppercase;
+        font-weight: bold;
+        //text-align: center;
         color: $theme-gold;
-        font-size: 1.4em;
-        text-align: center;
+        text-shadow: $theme-black 1px 1px 0;
+        margin-bottom: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        color: $theme-black;
+        font-weight: 500;
+        font-size: 1.1em;
+        padding: 4px;
+        text-transform: capitalize;
+        text-align: left;
+        display: block;
       }
     }
   }
@@ -224,7 +239,7 @@ section {
       }
     }
     .btn-pos {
-      bottom: 15px;
+      bottom: 50px;
       position: absolute;
       margin-right: 30px;
       right: 0;
@@ -574,6 +589,24 @@ section {
   width: inherit;
 }
 
+footer {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  .inner-footer {
+    color: $theme-white;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-size: .9em;
+    span {
+      text-shadow: $theme-black 2px 0px 4px;
+      //display: inline-block;
+    }
+  }
+}
 @keyframes rotate-logo {
   from {
     transform: rotate(0deg);

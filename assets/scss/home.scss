@@ -16,6 +16,20 @@ section {
   width: 100%;
 }
 
+#icon-top {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fff; //color: $theme-white;
+  cursor: pointer;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, .3) -3px 3px 6px;
+}
+
 .header {
   width: 100%;
   background: transparent;
@@ -151,7 +165,9 @@ section {
         }
       }
     }
-
+    .mouse-div {
+      display: none;
+    }
     .over-content {
       //background: rgba($theme-black, .6);
       position: absolute;
@@ -589,6 +605,36 @@ section {
   width: inherit;
 }
 
+.mouse-div {
+  max-height: 50px;
+  z-index: 9999;
+  position: absolute;
+  bottom: 8%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.mouse {
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  background: no-repeat center;
+  margin: auto;
+  z-index: 10000000000;
+  -webkit-animation-duration: 4s;
+  color: white;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.scroll-icon {
+  outline: 0;
+  border: 0;
+  background-size: contain;
+  background: url('../images/scroIcon.png') no-repeat center;
+  height: 60px;
+  width: 100%;
+}
+
 footer {
   background: transparent;
   position: absolute;
@@ -601,12 +647,14 @@ footer {
     padding: 10px;
     text-align: center;
     font-size: .9em;
-    span {
+    span a {
+      color: $theme-white;
       text-shadow: $theme-black 2px 0px 4px;
       //display: inline-block;
     }
   }
 }
+
 @keyframes rotate-logo {
   from {
     transform: rotate(0deg);
@@ -712,8 +760,87 @@ footer {
           z-index: -1;
         }
       }
+      strong {
+        font-size: 20px;
+        padding-top: 5px;
+        text-align: center;
+        color: $theme-gold;
+      }
     }
   }
 }
 
+@media (max-width: 768px) {
+  #icon-top {
+    padding: 18px;
+    bottom: 5px;
+    right: 2px;
+  }
+  .header {
+    &.scrolled {
+      @include transition(0.5s);
+      position: fixed;
+      z-index: 9999999;
+      background: rgba($theme-white, .6);
+      nav {
+        li a {
+          color: $theme-black;
+          font-weight: bold;
+        }
+        .btn {
+          @include borderLine($theme-black);
+          color: $theme-black;
+        }
+      }
+    }
+  }
+  .welcome {
+    .buyer, .seller {
+      width: 100%;
+      float: none;
+    }
+    .buyer {
+      .over-content {
+        margin: 10em 0 0;
+        padding: 10px;
+      }
+      .btn-buyer-cont {
+        bottom: 45%;
+        left: 70px;
+      }
+    }
+    .seller {
+      .vendor-msg {
+        margin: 0;
+        padding: 14em 30px 0;
+      }
+      .btn-pos {
+        bottom: -56%;
+        right: 71px;
+      }
+    }
+    .center-circle {
+      display: none;
+    }
+    .owl-stage-outer {
+      height: 100vh;
+    }
+    .no-js .owl-carousel, .owl-carousel.owl-loaded {
+      height: 100vh;
+    }
+    #owl-demo {
+      .item {
+        img {
+          display: block;
+          width: 100%;
+          height: 100vh;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  footer {
+    bottom: -100%;
+  }
+}
 

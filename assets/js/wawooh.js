@@ -6,25 +6,32 @@
  *  When the user scrolls down from 20px from the top of the document
  */
 
-// window.onscroll = function () {
-//     scrollFunction();
-// };
-//
-// function scrollFunction() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         document.getElementById("icon-top").style.display = "block";
-//     } else {
-//         document.getElementById("icon-top").style.display = "none";
-//     }
-// }
+window.onscroll = function () {
+    scrollFunction();
+};
 
-// $(window).load(function () {
-//     alert('something');
-//  $('.nab').fadeOut();
-//  $('.preloader').delay(1000).fadeOut('slow');
-// });
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("icon-top").style.display = "block";
+    } else {
+        document.getElementById("icon-top").style.display = "none";
+    }
+}
+
+function topFunction() {
+    $("html, body").animate({
+        scrollTop: 0
+    })
+}
 
 $(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 1)
+            $('.header').addClass('scrolled');
+        else
+            $('.header').removeClass('scrolled');
+    });
+
     $('[name = "d-decision"]').change(function () {
         var use = document.getElementById('acc-detail');
         use.style.display = this.value == "refund" ? "block" : "none";
@@ -283,6 +290,11 @@ $(document).ready(function () {
         animateOut: 'zoomOutLeft',
         animateIn: 'fadeInLeft',
         autoplayHoverPause: false
+    });
+    $(".scroll-icon").click(function () {
+        $("html, body").animate({
+            scrollTop: $(".seller").offset().top - 1
+        }, 500);
     });
 });
 

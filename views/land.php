@@ -15,6 +15,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/slider/demo.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -24,7 +25,10 @@
     </style>
 </head>
 <body>
-
+<a name="top" class="home"></a>
+<button onclick="topFunction()" id="icon-top" title="Top">
+    <i class="fa fa-fw fa-chevron-up"></i>
+</button>
 <header class="header">
     <nav>
         <div class="logo-brand">
@@ -77,6 +81,11 @@
             <a href="#" class="btn btn-buyer"><span>Take me to shop</span></a>
         </div>
     </div>
+    <div class="mouse-div">
+        <div class="mouse animated infinite bounce">
+            <button class="scroll-icon"></button>
+        </div>
+    </div>
     <div class="center-circle wow animated zoomInDown" data-wow-delay="2s" data-wow-duration="1.5s">
         <img src="assets/images/logo-sm.png" alt="">
     </div>
@@ -93,9 +102,9 @@
 </section>
 <footer>
     <div class="inner-footer">
-        <span>&copy; 2018 Wawooh HQ - All rights reserved
-        <a href="">Privacy Policy</a> | <a href="">Terms & Conditions</a>
-            </span>
+        <span>&copy; 2018 Wawooh HQ. All rights reserved <br>
+            <a href="">Privacy Policy</a> | <a href="">Terms & Conditions</a>
+        </span>
     </div>
 </footer>
 
@@ -105,13 +114,5 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/wawooh.js"></script>
-
-<script>
-    $(document).ready(function () {
-
-
-
-    });
-</script>
 </body>
 </html>

@@ -51,6 +51,8 @@
                                     <img src="../assets/images/money.png" alt="">
                                 </li>
                             </ul>
+
+                            <strong class="wow animated slideInUp" data-wow-delay="15s" data-wow-duration="1.5s">As Simple As A,B,C</strong>
                         </div>
                     </div>
                 </div>
@@ -178,6 +180,10 @@
     </div>
 </section>
 <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+<script src="assets/js/slider/jquery.ba-cond.min.js"></script>
+<script src="assets/js/slider/jquery.slitslider.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/wawooh.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>

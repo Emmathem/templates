@@ -18,6 +18,12 @@
 //     }
 // }
 
+// $(window).load(function () {
+//     alert('something');
+//  $('.nab').fadeOut();
+//  $('.preloader').delay(1000).fadeOut('slow');
+// });
+
 $(function () {
     $('[name = "d-decision"]').change(function () {
         var use = document.getElementById('acc-detail');

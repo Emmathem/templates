@@ -17,13 +17,11 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/slider/demo.css">
-    <link rel="stylesheet" href="assets/css/slider/style.css">
-    <link rel="stylesheet" href="assets/css/slider/styleNoJS.css">
-    <script src="assets/js/slider/modernizr.custom.79639.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="assets/css/slider/custom.css">
-    </noscript>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <title>Welcome Home</title>
+    <style type="text/css">
+    </style>
 </head>
 <body>
 <header class="header">
@@ -42,54 +40,34 @@
 </header>
 <section class="welcome">
     <div class="buyer">
+        <div class="over-content">
+            <span>Buyers Here!</span>
+        </div>
         <div class="b-cover"></div>
-        <div class="sl-slider-wrapper" id="slider">
-            <div class="sl-slider">
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25"
-                     data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider1"></div>
-                        <div class="b-cover"></div>
-                    </div>
-                </div>
+        <div id="owl-demo" class="owl-carousel owl-theme">
 
-                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
-                     data-slice1-scale="1.5" data-slice2-scale="1.5">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider2"></div>
-                        <div class="b-cover"></div>
-                    </div>
-                </div>
-
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3"
-                     data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider3"></div>
-                        <div class="b-cover"></div>
-                    </div>
-                </div>
-
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3"
-                     data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider4"></div>
-                        <div class="b-cover"></div>
-                    </div>
-                </div>
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider5"></div>
-                        <div class="b-cover"></div>
-                    </div>
-                </div>
-
-                <!--<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div class="slider-img slider6"></div>
-                        <div class="slide-overlay"></div>
-                    </div>
-                </div>-->
+            <div class="item">
+                <img src="assets/images/img13.jpg">
+                <div class="b-cover"></div>
+                <span>The test</span>
             </div>
+            <div class="item">
+                <img src="assets/images/img04.gif">
+                <div class="b-cover"></div>
+            </div>
+            <div class="item">
+                <img src="assets/images/img06.jpg">
+                <div class="b-cover"></div>
+            </div>
+            <div class="item">
+                <img src="assets/images/img05.jpg">
+                <div class="b-cover"></div>
+            </div>
+            <div class="item">
+                <img src="assets/images/buyerafrica.jpeg">
+                <div class="b-cover"></div>
+            </div>
+
         </div>
         <div class="btn-buyer-cont">
             <a href="#" class="btn btn-buyer"><span>Take me to shop</span></a>
@@ -100,20 +78,42 @@
     </div>
     <div class="seller">
         <div class="v-cover"></div>
+        <div class="vendor-msg">
+            <h3>Vendors</h3>
+            <span>Boost sales with <strong>Wawooh</strong> today. Get known across the world.</span>
+        </div>
         <div class="btn-pos">
-            <a href="designers" target="_new" class="btn btn-vendor"><span>Login as a Vendor</span></a>
+            <a href="designers" target="_new" class="btn btn-vendor"><span>Boost Your Work</span></a>
         </div>
     </div>
 </section>
 
 <script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/wawooh.js"></script>
 <script src="assets/js/slider/jquery.ba-cond.min.js"></script>
 <script src="assets/js/slider/jquery.slitslider.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/wawooh.js"></script>
 
 <script>
+    $(document).ready(function () {
 
+        var owl = $("#owl-demo");
+
+        owl.owlCarousel({
+            navigation: false,
+            loop: true,
+            dots: false,
+            items: 1,
+            autoplay: true,
+            //transitionStyle: "backSlide",
+            autoplayTimeout: 3000,
+            animateOut: 'zoomOutLeft',
+            animateIn: 'fadeInRight',
+            autoplayHoverPause: true
+        });
+
+    });
 </script>
 </body>
 </html>

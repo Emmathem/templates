@@ -87,7 +87,7 @@ $slide: (
         url('../images/img04.gif'),
         url('../images/img05.jpg'),
         url('../images/img06.jpg'),
-        url('../images/buyerafrica.jpeg')
+        url(' ../images/buyerafrica.jpeg')
 );
 
 @mixin addImagesToSlide($divName, $image) {

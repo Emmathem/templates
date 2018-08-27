@@ -151,9 +151,42 @@ section {
         }
       }
     }
+
+    .over-content {
+      background: rgba($theme-black, .6);
+      position: absolute;
+      z-index: 9999;
+      width: inherit;
+      top: 25%;
+      padding: 10px;
+      margin: 0;
+      height: auto;
+      span {
+        color: $theme-gold;
+        font-size: 1.4em;
+        text-align: center;
+      }
+    }
   }
 
   @include addImagesToSlide(slider, $slide);
+  .owl-stage-outer {
+    height: inherit;
+  }
+  .no-js .owl-carousel, .owl-carousel.owl-loaded {
+    height: inherit;
+  }
+  #owl-demo {
+    .item {
+      img {
+        display: block;
+        width: 100%;
+        height: inherit;
+        background: no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
   .slider-img {
     box-sizing: content-box;
     position: absolute;
@@ -162,10 +195,34 @@ section {
     background-size: cover;
     background-position: center center;
   }
+
   .seller {
     @extend .buyer;
     background: $theme-black url("../images/vendor.jpg") no-repeat center;
     background-size: cover;
+    .vendor-msg {
+      position: relative;
+      margin: 14em 30px 0;
+      width: auto;
+      padding: 30px;
+      h3 {
+        font-size: 2.4em;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        color: $theme-gold;
+        margin-bottom: 0;
+      }
+      span {
+        line-height: 25px;
+        color: $theme-white;
+        font-size: 20px;
+        strong {
+          font-size: 20px;
+          border-bottom: 2px solid $theme-gold;
+        }
+      }
+    }
     .btn-pos {
       bottom: 15px;
       position: absolute;
@@ -505,6 +562,7 @@ section {
   position: absolute;
   height: 100%;
   width: inherit;
+  z-index: 10;
 }
 
 .v-cover {

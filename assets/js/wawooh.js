@@ -263,6 +263,7 @@ $(document).ready(function () {
             'marginTop': '4em'
         });
     });
+    
     $('#loginReg').on('click', function (e) {
         e.preventDefault();
         $('#regForm').hide(500);
@@ -273,6 +274,7 @@ $(document).ready(function () {
         })
         //location.reload();
     });
+    
     $('.card').click(function(){
         $(this).toggleClass('flipped');
     });
@@ -286,11 +288,12 @@ $(document).ready(function () {
         items: 1,
         autoplay: true,
         //transitionStyle: "backSlide",
-        autoplayTimeout: 3000,
+        //autoplayTimeout: 3000,
         animateOut: 'zoomOutLeft',
         animateIn: 'fadeInLeft',
         autoplayHoverPause: false
     });
+    
     $(".scroll-icon").click(function () {
         $("html, body").animate({
             scrollTop: $(".seller").offset().top - 1

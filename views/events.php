@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/events.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>Events | Home</title>
     <style type="text/css">
     </style>
@@ -50,6 +51,17 @@
         <h3>W<strong>&#581;</strong>WOOH EVENTS</h3>
         <div class="underline"></div>
         <span class="animated pulse">inspiring you</span>
+
+        <div class="searchForm">
+            <form action="" class="inputS">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for event" class="form-control">
+                    <span class="search-icon">
+                            <button type="submit"><img src="assets/images/search.png" alt="S"></button>
+                        </span>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="cover"></div>
     <video class="videoBg" loop muted autoplay>

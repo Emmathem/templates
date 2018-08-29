@@ -19,7 +19,7 @@
   width: 100%;
 }
 .event-landing {
-  height: 70vh;
+  height: 80vh;
   background: $theme-black url("../images/gallery1.jpg");
   background-size: cover;
   .inner-landing {
@@ -51,6 +51,46 @@
       font-size: 2em;
       color: $theme-white;
       animation: .3s infinite;
+    }
+    .searchForm {
+      margin-top: 5em;
+      .inputS {
+        //display: inline-flex;
+      }
+      .form-control {
+        padding: 1.7em 2em;
+        border-radius: 50px;
+        width: 60% !important;
+        margin: auto;
+        font-size: 16px;
+        font-weight: bold;
+        background: transparent;
+        @include borderLine($theme-gold);
+        color: $theme-white;
+        &:focus {
+          @include noBoxShadow(none);
+        }
+      }
+      .search-icon {
+        button {
+          background: transparent;
+          border: none;
+          outline: none;
+        }
+        position: absolute;
+        top: 84%;
+        right: 15%;
+        img {
+          width: 36%;
+          background-size: contain;
+          background-color: rgba($theme-white,.5);
+          border-radius: 50px;
+          &:hover {
+            background: $theme-white;
+            @include transition(0.5s);
+          }
+        }
+      }
     }
   }
 }

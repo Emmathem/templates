@@ -62,17 +62,17 @@
                 </div>
             </form>
         </div>
+        <div class="mouse-div">
+            <div class="mouse animated infinite bounce">
+                <i class="fa fa-long-arrow-down fa-2x"></i>
+<!--                <button class="scroll-icon"></button>-->
+            </div>
+        </div>
     </div>
     <div class="cover"></div>
     <video class="videoBg" loop muted autoplay>
         <source src="../assets/bgvideo.mp4">
     </video>
-
-    <!--    <div class="mouse-div">-->
-    <!--        <div class="mouse animated infinite bounce">-->
-    <!--            <button class="scroll-icon"></button>-->
-    <!--        </div>-->
-    <!--    </div>-->
 
 </section>
 <footer>

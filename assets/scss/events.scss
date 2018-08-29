@@ -5,7 +5,36 @@
   position: relative !important;
   background: $theme-white !important;
 }
+.mouse-div {
+  max-height: 50px;
+  display: block;
+  z-index: 9999;
+  position: absolute;
+  bottom: -15%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.mouse {
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  background: no-repeat center;
+  margin: auto;
+  z-index: 10000000000;
+  -webkit-animation-duration: 4s;
+  color: white;
+  -webkit-animation-iteration-count: infinite;
+}
 
+.scroll-icon {
+  outline: 0;
+  border: 0;
+  background-size: contain;
+  background: url('../images/scroIcon-white.png') no-repeat center;
+  height: 60px;
+  width: 100%;
+}
 .cover {
   background: $theme-black;
   opacity: .72;
@@ -30,7 +59,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    padding-top: 12%;
+    padding-top: 10%;
     .underline {
       width: 40%;
       height: 1px;
@@ -78,8 +107,8 @@
           outline: none;
         }
         position: absolute;
-        top: 84%;
-        right: 15%;
+        top: 83%;
+        right: 15.5%;
         img {
           width: 36%;
           background-size: contain;

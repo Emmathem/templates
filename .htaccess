@@ -7,9 +7,10 @@ RewriteRule ^decision/?$ views/decision.php [NC,L,QSA]
 RewriteRule ^category/?$ views/category.php [NC,L,QSA]
 RewriteRule ^home/?$ views/land.php [NC,L,QSA]
 RewriteRule ^designers/?$ views/designer.php [NC,L,QSA]
-RewriteRule ^logout/?$ view/logout.php [NC,L,QSA]
-RewriteRule ^picture-gallery/?$ views/picture-gallery.php [NC,L,QSA]
-RewriteRule ^videos-gallery/?$ views/videos-gallery.php [NC,L,QSA]
+RewriteRule ^dashboard?$ views/dashboard.php [NC,L,QSA]
+RewriteRule ^orders/?$ views/orders.php [NC,L,QSA]
+RewriteRule ^products/?$ views/products.php [NC,L,QSA]
+RewriteRule ^events/?$ views/events.php [NC,L,QSA]
 #RewriteRule ^pagenotfound/?$ view/error/pagenotfound.php [NC,L,QSA]
 #errorDocument 404 http://eduinfoyoruba.org/pagenotfound
 

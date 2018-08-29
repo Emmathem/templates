@@ -77,8 +77,14 @@
                 <div class="b-cover"></div>
             </div>
         </div>
-        <div class="btn-buyer-cont wow animated fadeInUp" data-wow-delay="2.1s" data-wow-duration=".5s">
-            <a href="#" class="btn btn-buyer"><span>Take me to shop</span></a>
+        <div class="btnHolder">
+            <div class="btn-buyer-cont wow animated fadeInUp" data-wow-delay="2.1s" data-wow-duration=".5s">
+                <a href="events" class="btn btn-event"><span>Events</span></a>
+            </div>
+
+            <div class="btn-buyer-cont wow animated fadeInUp" data-wow-delay="2.1s" data-wow-duration=".5s">
+                <a href="store" class="btn btn-buyer"><span>Take me to shop</span></a>
+            </div>
         </div>
     </div>
     <div class="mouse-div">

@@ -1,0 +1,25 @@
+@import "_partials/_vars";
+@import "_partials/_mixins";
+
+.navbar {
+  background: $theme-black;
+  .navbar-brand-wrapper {
+    .navbar-brand {
+      img {
+        height: auto;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.orderDetails {
+  margin-left: 0 !important;
+  h6 {
+    text-align: center;
+  }
+}
+
+.sideFix {
+  position: fixed;
+}

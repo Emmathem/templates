@@ -1,0 +1,65 @@
+@import "_partials/_vars";
+@import "_partials/_mixins";
+
+.header {
+  position: relative !important;
+  background: $theme-white !important;
+}
+
+.cover {
+  background: $theme-black;
+  opacity: .72;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.videoBg {
+  height: inherit;
+  width: 100%;
+}
+.event-landing {
+  height: 70vh;
+  background: $theme-black url("../images/gallery1.jpg");
+  background-size: cover;
+  .inner-landing {
+    position: absolute;
+    width: 60%;
+    z-index: 9999;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 12%;
+    .underline {
+      width: 40%;
+      height: 1px;
+      margin: 2px auto 0;
+      background-color: $theme-white;
+    }
+    h3 {
+      font-size: 4em;
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: $theme-gold;
+      margin-bottom: 1px;
+    }
+    strong {
+      color: $theme-white;
+    }
+    span {
+      font-size: 2em;
+      color: $theme-white;
+      animation: .3s infinite;
+    }
+  }
+}
+
+@keyframes shakeL {
+  from, 10%, 40%, to {
+    transform: rotate(10deg);
+  }
+  70%, 100% {
+    transform: rotate(40deg);
+  }
+}
